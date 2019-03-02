@@ -1,9 +1,19 @@
-students_scores = [
-    {'school_class': '4a', 'scores': [3,4,4,5,2]},
-    {'school_class': '5b', 'scores': [2,3,4,3,1]},
-    {'school_class': '7с', 'scores': [3,3,3,5,2,1]},
-    {'school_class': '8с', 'scores': [3,3,3,5,2,1]},
+#словарь вопросов ответов
+qa = [
+    {'question':"Как дела", 'answer': "Хорошо!"}, 
+    {'question':"Куда пойдешь?", 'answer':"На курсы"},
+    {'question':"Что делаешь?", 'answer':"Программирую"}, 
     ]
- 
-for scores in students_scores:
-    print[""]
+for quest in qa:
+    a=(quest["question"])
+    b=(quest["answer"])
+
+while True:
+    user_say = input()
+    if user_say == (a):
+        print (b)
+        break
+    else:
+        print ('Нет ответа на {}'.format(user_say))
+
+#проблема 1 - почему то ищет всегда по последнему вопросу
