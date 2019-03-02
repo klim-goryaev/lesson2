@@ -1,14 +1,21 @@
-def let (age):
-    age =int(age)#приводим к числу введенное пользователем
-    if age <= 7: #отправляем в детский сад
-        print ('В детский сад')
-    elif age <=17: #отправляем в школу
-        print ('В школу')
-    elif age <=22: #отправляем в ВУЗ
-        print ('В университет')
-    elif age <=65: #отправляем на работу
-        print ('Пора на работу!')
-    elif age >=65: #отправляем на работу
-        print ('Пора на пенсию')
-    return age
-let (input('Введите ваш возраст')) #пользователь вводит возраст
+def vozrast (age) :
+	try :
+		age_int = int(age)
+		if age_int >0:
+			if age_int <= 7 :
+				print("В детский сад")
+				return
+			if age_int <= 16 :
+				print("В школу")
+				return
+			if age_int <= 23 :
+				print("В университет")
+				return
+			if age_int <= 65 :
+				print("На работу")
+				return
+		else:
+			print("Введено отрицательное число")
+	except ValueError :
+		print("Введено не число")
+vozrast (input('Введите ваш возраст: ')) #пользователь вводит возраст
